@@ -72,6 +72,45 @@ const doSomeWordsHaveAnA = () => {
   return words.some(word => word.includes('a'))
 };
 
+//BONUS SECTION 
+
+//reduce
+const addAllTheNumbers = () => {
+
+}
+
+const conCatAllWords = () => {
+
+}
+
+//sort
+const letsNotArgue = () => {
+
+}
+
+const sortTheNumbers = () => {
+
+}
+
+const sortTheWords = () => {
+
+}
+
+// Array Methods Challenge Problems
+
+const isPanagram = () => {
+
+}
+
+const filterProducts = () => {
+
+}
+
+const sortAlphabetically = () => {
+
+}
+
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
@@ -87,4 +126,12 @@ module.exports = {
   arrayWordsUpcased,
   areSomeNumsDivisibleBy7,
   doSomeWordsHaveAnA,
+  addAllTheNumbers,
+  conCatAllWords, 
+  letsNotArgue,
+  sortTheNumbers,
+  sortTheWords,
+  isPanagram,
+  filterProducts,
+  sortAlphabetically
 };
