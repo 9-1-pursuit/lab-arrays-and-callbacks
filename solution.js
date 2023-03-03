@@ -12,11 +12,11 @@ const isEveryWordShorterThan7 = () => {
 // Filter
 
 const arrayLessThan5 = () => {
-  //
+  return nums.filter(num => num < 5)
 };
 
 const arrayOddLengthWords = () => {
-  //
+  return words.filter(word => word.length % 2 !== 0)
 };
 
 // Find
