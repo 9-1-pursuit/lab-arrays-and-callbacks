@@ -49,14 +49,17 @@ const logWordsWithExclamation = () => {
   words.forEach(word => console.log(word.length === "!"))
 };
 
+//Ask if we were meant to show the thoughts questions confused on if I have to show the process.
+
 // Map
 
 const arrayValuesSquaredTimesIndex = () => {
-  //
+  return nums.map((num, index) => num * num * index)
+  //why ya making me do math -_0
 };
 
 const arrayWordsUpcased = () => {
-  //
+  return words.map(word => word.toUpperCase())
 };
 
 // Some
