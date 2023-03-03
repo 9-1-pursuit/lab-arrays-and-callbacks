@@ -42,11 +42,11 @@ const firstWordIndexLessThan2Char = () => {
 // For Each
 
 const logValuesTimes3 = () => {
-  //
+  nums.forEach(num => console.log(num *3))
 };
 
 const logWordsWithExclamation = () => {
-  //
+  words.forEach(word => console.log(word.length === "!"))
 };
 
 // Map
