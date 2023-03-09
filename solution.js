@@ -41,12 +41,30 @@ const firstWordIndexLessThan2Char = (words) => {
 
 // For Each
 
-const logValuesTimes3 = () => {
-  //
+const logValuesTimes3 = (nums) => {
+  // forEach can push elements into a new array
+  let newArr = [];
+
+  nums.forEach((num) => {
+    console.log(num * 3);
+    newArr.push(num * 3)
+  });
+
+  // forEach does not mutate the original array
+  console.log(
+    'Original Array:', 
+    nums, 
+    '\n', 
+    'New Array:', 
+    newArr
+  )
+
 };
 
-const logWordsWithExclamation = () => {
-  //
+logValuesTimes3(nums)
+
+const logWordsWithExclamation = (words) => {
+  words.forEach((word) => console.log(word + '!'))
 };
 
 // Map
