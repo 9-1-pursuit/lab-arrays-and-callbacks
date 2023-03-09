@@ -1,32 +1,39 @@
 const { nums, words } = require("./data/data.js");
 
 // Every
-const isEveryNumGreaterThan2 = () => {
-  //
+// every() -> boolean if ALL elements meet condtional
+const isEveryNumGreaterThan2 = (arr) => {
+  const greater2 = arr.every(el => el > 2)
+  return greater2
 };
 
-const isEveryWordShorterThan7 = () => {
-  //
+const isEveryWordShorterThan7 = (arr) => {
+  const less7 = arr.every(el => el.length < 7)
+  return less7
 };
 
 // Filter
-
-const arrayLessThan5 = () => {
-  //
+// filter() -> returns elements to new array that meet conditional
+const arrayLessThan5 = (arr) => {
+  const less5 = arr.filter(el => el < 5)
+  return less5
 };
 
-const arrayOddLengthWords = () => {
-  //
+const arrayOddLengthWords = (arr) => {
+  const oddLength = arr.filter(el => (el.length % 2) !== 0)
+  return oddLength
 };
 
 // Find
-
-const firstValDivisibleBy4 = () => {
-  //
+// find() returns the first element that meets conditional
+const firstValDivisibleBy4 = (arr) => {
+  const factor4 = arr.find(el => (el % 4) === 0)
+  return factor4
 };
 
-const firstWordLongerThan4Char = () => {
-  //
+const firstWordLongerThan4Char = (arr) => {
+  const longer4 = arr.find(el => el.length > 4)
+  return longer4
 };
 
 // Find Index
