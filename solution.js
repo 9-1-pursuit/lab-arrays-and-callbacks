@@ -42,31 +42,31 @@ const firstWordIndexLessThan2Char = () => {
 // For Each
 
 const logValuesTimes3 = () => {
-  nums.forEach((num) => console.log(num * 3));
+  return nums.forEach((num) => console.log(num * 3));
 };
 
 const logWordsWithExclamation = () => {
-  words.forEach((word) => console.log(word + "!"));
+  return words.forEach((word) => console.log(word + "!"));
 };
 
 // Map
 
 const arrayValuesSquaredTimesIndex = () => {
-  nums.map((num, i) => num ** 2 * i);
+  return nums.map((num, i) => num ** 2 * i);
 };
 
 const arrayWordsUpcased = () => {
-  words.map((word) => word.toUpperCase());
+  return words.map((word) => word.toUpperCase());
 };
 
 // Some
 
 const areSomeNumsDivisibleBy7 = () => {
-  nums.some((num) => num % 7 === 0);
+  return nums.some((num) => num % 7 === 0);
 };
 
 const doSomeWordsHaveAnA = () => {
-  words.some((word) => word.includes("a"));
+  return words.some((word) => word.includes("a"));
 };
 
 module.exports = {
