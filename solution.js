@@ -37,33 +37,45 @@ const firstWordLongerThan4Char = (arr) => {
 };
 
 // Find Index
-
-const firstNumIndexDivisibleBy3 = () => {
-  //
+// findIndex() -> returns index position of FIRST element that meets conditional, if none, -1 returned
+const firstNumIndexDivisibleBy3 = (arr) => {
+  const factor3 = arr.findIndex(el => (el % 3) === 0)
+  return factor3
 };
 
-const firstWordIndexLessThan2Char = () => {
-  //
+const firstWordIndexLessThan2Char = (arr) => {
+  const shorter2 = arr.findIndex(el => el.length < 2)
+  return shorter2
 };
 
 // For Each
-
-const logValuesTimes3 = () => {
-  //
+// forEach() -> loops over array, does something, but no return
+const logValuesTimes3 = (arr) => {
+  arr.forEach(el => console.log(el * 3))
 };
 
-const logWordsWithExclamation = () => {
-  //
+const logWordsWithExclamation = (arr) => {
+  arr.forEach(el => {
+    const exclamation = el.charAt(-1) === "!" ? true : false
+    if(exclamation){
+      console.log(el)
+    }
+  })
 };
 
 // Map
-
-const arrayValuesSquaredTimesIndex = () => {
-  //
+// map() -> loops over an array, and returns values to as a new array
+const arrayValuesSquaredTimesIndex = (arr) => {
+  const mathArr = arr.map((el, i) => {
+    const value = Math.pow(el, 2) * i
+    return value
+  })
+  return mathArr
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (arr) => {
+  const upperCase = arr.map(el => el.toUpperCase())
+  return upperCase
 };
 
 // Some
