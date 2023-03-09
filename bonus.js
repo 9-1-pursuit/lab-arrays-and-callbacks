@@ -78,3 +78,26 @@ function sortStrDesc(arr){
 
 // Array Methods Challenge Problems
 // isPanagram
+const alphabet = []
+for (let i = 0; i <26; i++){
+    alphabet.push(String.fromCharCode(97 + i))
+}
+
+function isPanagram(arr){
+    const letters = [...alphabet]
+    arr.forEach(word => {
+        const wordArr = word.split('')
+        wordArr.forEach(letter => {
+            if(letters.includes(letter.toLowerCase())){
+                const indexOfLetter = letters.findIndex(val => val === letter.toLowerCase())
+                // letters.splice(1, indexOfLetter) <- index positions change everytime, not good
+                letters[indexOfLetter] = ""
+            }
+        } )
+    })
+    // console.log(letters)
+    const allLetters = letters.join('').length === 0 ? true : false
+    return allLetters
+}
+
+console.log(isPanagram(panagram))
