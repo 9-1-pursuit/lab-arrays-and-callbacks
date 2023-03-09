@@ -79,13 +79,23 @@ const arrayWordsUpcased = (arr) => {
 };
 
 // Some
-
-const areSomeNumsDivisibleBy7 = () => {
-  //
+// some() -> returns true if at least ONE element meets conditional otherwise if none returns false
+const areSomeNumsDivisibleBy7 = (arr) => {
+  const some = arr.some(el => (el % 7) === 0 )
+  return some
 };
 
-const doSomeWordsHaveAnA = () => {
-  //
+const doSomeWordsHaveAnA = (arr) => {
+  // is case- sensitive ???? -> if a or A /[aA]/
+  // el.match(regex) -> returns array or null
+  // regex.test(el) -> returns boolean
+  const caseMatters = arr.some(el => {
+    const letterA = /[a]/
+    // const match = el.match(letterA)
+    const match = letterA.test(el)
+    if(match) return true
+  })
+  return caseMatters
 };
 
 module.exports = {
