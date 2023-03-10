@@ -18,7 +18,8 @@ Sort the words in descending order
 // Reduce
 /* 
    - use reduce to concat nested arrays into acc array 
-        - b = A.reduce((acc, x) => acc.concat(x), [])
+        - arr = [[],[],[],[]]
+        - arr2 = arr.reduce((acc, el) => acc.concat(el), [])
 */
 function reduceSum(arr) {
     const sum = arr.reduce((acc, el) => {
@@ -36,15 +37,15 @@ function reduceStr(arr){
 
 // Sort
 /* 
-     - console.log(words.sort()) -> orders by first letter, capital first
-    - console.log(nums.sort()) -> orders asc based on first number -> 10, before 9
+     - console.log(words.sort()) -> orders by first letter, capital first ??
+    - console.log(nums.sort()) -> orders asc based on first number -> 10, before 9 ??
 */
 // compare function for numbers (used w/ both sortNum functions)
 function orderNumbers(a, b){
     if(typeof a === "string" && typeof b === "string"){
         return a.toLowerCase() < b.toLowerCase() ? -1 : 1 || 0
         
-        // check if same letter, if one capital, order accordingly, or loop through string and compare subsequent letters
+        // Questions ?? check if same letter, if one capital, order accordingly, or loop through string and compare subsequent letters
     }
   return a < b ? -1 : 1 || 0
 }
@@ -95,7 +96,6 @@ function isPanagram(arr){
             }
         } )
     })
-    // console.log(letters)
     const allLetters = letters.join('').length === 0 ? true : false
     return allLetters
 }
@@ -114,7 +114,6 @@ function panagram2(arr){
 }
 // console.log(panagram2(panagram))
 // console.log(isPanagram(panagram))
-
 
 // Working with data
 /* 
