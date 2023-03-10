@@ -112,5 +112,24 @@ function panagram2(arr){
     const leftoverLetters = alphabetCopy.join('').length === 0 ? true : false
     return leftoverLetters
 }
-console.log(panagram2(panagram))
+// console.log(panagram2(panagram))
 // console.log(isPanagram(panagram))
+
+
+// Working with data
+/* 
+    - filter for products with a price that is less than 10 
+    -  Questions: 
+        -return array of product objects? OR list of product name ?
+    */
+function priceLessThan10(arr){
+    const filtered = arr.filter(({price}) => price < 10)
+    return filtered
+}
+
+// sort alphabetically by product name
+function sortProductName(arr){
+    arr.sort((a,b) => a.name < b.name ? -1 : 1 || 0 )
+    return arr
+}
+// console.log(sortProductName(products))
