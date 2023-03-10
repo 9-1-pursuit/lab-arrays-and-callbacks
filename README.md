@@ -84,7 +84,10 @@ You don't have to write an answer to the thought questions.
 **Thought Questions**
 
 - What happened to the original array?
+  nothing, it .map returns a new array
+
 - Can you store the values from a `map` method in a new array?
+  sure -- just say const exampleArr.map(etc) and the returned new array will be saved inside the variable
 
 #### Some
 
