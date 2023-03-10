@@ -70,7 +70,7 @@ const arrayWordsUpcased = (word) => {
 // Some
 
 const areSomeNumsDivisibleBy7 = (nums) => {
-  return nums.some((num) => num % 6 === 0);
+  return nums.some((num) => num % 7 === 0);
 };
 
 const doSomeWordsHaveAnA = (words) => {
