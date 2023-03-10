@@ -100,4 +100,17 @@ function isPanagram(arr){
     return allLetters
 }
 
-console.log(isPanagram(panagram))
+function panagram2(arr){
+    const wordStr = arr.join('').toLowerCase()
+    const alphabetCopy = [...alphabet]
+    for (let i = 0; i < wordStr.length ; i++){
+        if(alphabetCopy.includes(wordStr[i])){
+            const index = alphabetCopy.findIndex(el => el === wordStr[i])
+            alphabetCopy[index] = ""
+        }
+    }
+    const leftoverLetters = alphabetCopy.join('').length === 0 ? true : false
+    return leftoverLetters
+}
+console.log(panagram2(panagram))
+// console.log(isPanagram(panagram))
