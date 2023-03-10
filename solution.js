@@ -190,7 +190,7 @@ const areSomeNumsDivisibleBy7 = (nums) => {
 // Declare a function that takes in the parameter words
 // create a variable call aWord and set it equal to words array with some() method
 // Inside the some() pass word element as the argument
-// inside the some() return  if some words contain/inclues the letter a
+// inside the some() return if some words contain or includes the letter a
 // a second return for boolean value which is stored in variable aWord
 
 const doSomeWordsHaveAnA = (words) => {
