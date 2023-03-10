@@ -200,6 +200,17 @@ const doSomeWordsHaveAnA = (words) => {
   return aWord
 }
 
+// reduce
+// 1. Add all the numbers in the array together using the reduce method
+const sum = nums.reduce((acc, curr) => acc + curr)
+
+// 2. concatenate all the words using reduce
+const concatenateWords = words.reduce((acc, curr) => acc + curr)
+// Thought Questions
+
+// What happened to the original array?
+// Answer: Like the map function in the reduce function the original array stays the same
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
