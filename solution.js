@@ -1,72 +1,101 @@
 const { nums, words } = require("./data/data.js");
 
 // Every
-const isEveryNumGreaterThan2 = () => {
-  //
+// every() -> boolean if ALL elements meet condtional
+const isEveryNumGreaterThan2 = (arr) => {
+  const greater2 = arr.every(el => el > 2)
+  return greater2
 };
 
-const isEveryWordShorterThan7 = () => {
-  //
+const isEveryWordShorterThan7 = (arr) => {
+  const less7 = arr.every(el => el.length < 7)
+  return less7
 };
 
 // Filter
-
-const arrayLessThan5 = () => {
-  //
+// filter() -> returns elements to new array that meet conditional
+const arrayLessThan5 = (arr) => {
+  const less5 = arr.filter(el => el < 5)
+  return less5
 };
 
-const arrayOddLengthWords = () => {
-  //
+const arrayOddLengthWords = (arr) => {
+  const oddLength = arr.filter(el => (el.length % 2) !== 0)
+  return oddLength
 };
 
 // Find
-
-const firstValDivisibleBy4 = () => {
-  //
+// find() returns the first element that meets conditional
+const firstValDivisibleBy4 = (arr) => {
+  const factor4 = arr.find(el => (el % 4) === 0)
+  return factor4
 };
 
-const firstWordLongerThan4Char = () => {
-  //
+const firstWordLongerThan4Char = (arr) => {
+  const longer4 = arr.find(el => el.length > 4)
+  return longer4
 };
 
 // Find Index
-
-const firstNumIndexDivisibleBy3 = () => {
-  //
+// findIndex() -> returns index position of FIRST element that meets conditional, if none, -1 returned
+const firstNumIndexDivisibleBy3 = (arr) => {
+  const factor3 = arr.findIndex(el => (el % 3) === 0)
+  return factor3
 };
 
-const firstWordIndexLessThan2Char = () => {
-  //
+const firstWordIndexLessThan2Char = (arr) => {
+  const shorter2 = arr.findIndex(el => el.length < 2)
+  return shorter2
 };
 
 // For Each
-
-const logValuesTimes3 = () => {
-  //
+// forEach() -> loops over array, does something, but no return
+const logValuesTimes3 = (arr) => {
+  arr.forEach(el => console.log(el * 3))
 };
 
-const logWordsWithExclamation = () => {
-  //
+const logWordsWithExclamation = (arr) => {
+  arr.forEach(el => {
+    const exclamation = el.charAt(-1) === "!" ? true : false
+    if(exclamation){
+      console.log(el)
+    }
+  })
 };
 
 // Map
-
-const arrayValuesSquaredTimesIndex = () => {
-  //
+// map() -> loops over an array, and returns values to as a new array
+const arrayValuesSquaredTimesIndex = (arr) => {
+  const mathArr = arr.map((el, i) => {
+    const value = Math.pow(el, 2) * i
+    return value
+  })
+  return mathArr
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (arr) => {
+  const upperCase = arr.map(el => el.toUpperCase())
+  return upperCase
 };
 
 // Some
-
-const areSomeNumsDivisibleBy7 = () => {
-  //
+// some() -> returns true if at least ONE element meets conditional otherwise if none returns false
+const areSomeNumsDivisibleBy7 = (arr) => {
+  const some = arr.some(el => (el % 7) === 0 )
+  return some
 };
 
-const doSomeWordsHaveAnA = () => {
-  //
+const doSomeWordsHaveAnA = (arr) => {
+  // is case- sensitive ???? -> if a or A /[aA]/
+  // el.match(regex) -> returns array or null
+  // regex.test(el) -> returns boolean
+  const caseMatters = arr.some(el => {
+    const letterA = /[a]/
+    // const match = el.match(letterA)
+    const match = letterA.test(el)
+    if(match) return true
+  })
+  return caseMatters
 };
 
 module.exports = {
