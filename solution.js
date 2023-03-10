@@ -71,6 +71,131 @@ const doSomeWordsHaveAnA = () => {
   return words.some((word) => word.includes("a"))
 };
 
+// Additional Problems
+
+// Reduce
+
+const sumOfAllNums = () => {
+  return nums.reduce((acc, num) => acc + num)
+};
+
+const concatAllWords = () => {
+  return words.reduce((acc, word) => acc + word)
+};
+
+// Sort
+
+const sortNumsAscending = () => {
+  return nums.sort((a, b) => a - b)
+};
+
+const sortNumsDescending = () => {
+  return nums.sort((a, b) => b - a)
+};
+
+const sortWordsAscending = () => {
+  return words.sort((a, b) => {
+		return a.toLowerCase() === b.toLowerCase() ? 0 : (a.toLowerCase() < b.toLowerCase() ? -1 : 1);
+	})
+};
+
+const sortWordsDescending = () => {
+  return words.sort((a, b) => {
+		return a.toLowerCase() === b.toLowerCase() ? 0 : (a.toLowerCase() > b.toLowerCase() ? -1 : 1);
+	})
+};
+
+// Panagram
+
+const panagram = [
+  "The",
+  "quick",
+  "brown",
+  "fox",
+  "jumps",
+  "over",
+  "the",
+  "lazy",
+  "dog",  
+];
+
+const isPanagram = () => {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let str = panagram.join("").toLowerCase();
+
+  for (let i = 0; i < alphabet.length; i++) {
+    if (!str.includes(alphabet[i])) return false;
+  }
+  return true
+};
+
+// Working with data
+
+const products = [
+  {
+    name: "fairy lights",
+    price: 5.99,
+    description: "festive holiday decoration",
+  },
+  {
+    name: "banana",
+    price: 0.99,
+    description: "full of potassium",
+  },
+  {
+    name: "egg separator",
+    price: 3.99,
+    description: "it separates yolks from whites",
+  },
+  {
+    name: "flag",
+    price: 5.99,
+    description: "catches the breeze",
+  },
+  {
+    name: "quark",
+    price: 0.01,
+    description: "Very small",
+  },
+  {
+    name: "turtleneck",
+    price: 19.99,
+    description: "available in black and slightly-darker black",
+  },
+  {
+    name: "mitt (leather)",
+    price: 15,
+    description: "regulation sized",
+  },
+  {
+    name: "nothing",
+    price: 10,
+    description: "Hey, if you pay us, we won't ask any questions.",
+  },
+  {
+    name: "violin",
+    price: 2000,
+    description: "Talk about a JS fiddle...",
+  },
+  {
+    name: "yoyo",
+    price: 1,
+    description: "We had to pull some strings to get this one in.",
+  },
+];
+
+// Filter
+
+const productsUnder10 = () => {
+  return products.filter((product) => product.price < 10)
+};
+
+const sortProductsAlphabetically = () => {
+  return products.sort((a, b) => {
+    return a.name.toLowerCase() === b.name.toLowerCase() ? 0 : (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1)
+  })
+};
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
