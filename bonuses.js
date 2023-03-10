@@ -68,7 +68,7 @@ const isPanagram = (arr) => {
   while (code < 123) {
     hasAllLetters = false;
     const letter = String.fromCharCode(code);
-    arr.find((e) => (e.includes(letter) ? (hasAllLetters = true) : null));
+    arr.find((e) => (e.toLowerCase().includes(letter) ? (hasAllLetters = true) : null));
 
     hasAllLetters ? code++ : (code = 123);
   }
@@ -76,6 +76,17 @@ const isPanagram = (arr) => {
 };
 
 // console.log(isPanagram(words));
+// console.log(isPanagram([
+//     "The",
+//     "quick",
+//     "broWn",
+//     "FoX",
+//     "jUmps",
+//     "over",
+//     "the",
+//     "lazy",
+//     "Dog",
+//   ]))
 
 // Working with data
 
