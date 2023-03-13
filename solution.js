@@ -61,12 +61,16 @@ const logWordsWithExclamation = (words) => {
 
 // Map
 
-const arrayValuesSquaredTimesIndex = () => {
-  //
+const arrayValuesSquaredTimesIndex = (nums) => {
+  return nums.map((num, idx) => {
+    return num ** 2 * idx
+  })
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (words) => {
+  return words.map((word) => {
+    return word.toUpperCase();
+  })
 };
 
 // Some
