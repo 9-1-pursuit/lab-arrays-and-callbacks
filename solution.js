@@ -32,11 +32,11 @@ const firstWordLongerThan4Char = (words) => {
 // Find Index
 
 const firstNumIndexDivisibleBy3 = (nums) => {
-  return nums.findIndex((num) => num % 3 === 0)
+  return nums.findIndex((num) => num % 3 === 0);
 };
 
 const firstWordIndexLessThan2Char = (words) => {
-  return words.findIndex((word) => word.length < 2)
+  return words.findIndex((word) => word.length < 2);
 };
 
 // For Each
@@ -46,25 +46,17 @@ const logValuesTimes3 = (nums) => {
   let newArr = [];
 
   nums.forEach((num) => {
-    console.log(num * 3);
-    newArr.push(num * 3)
+    newArr.push(num * 3);
   });
 
   // forEach does not mutate the original array
-  console.log(
-    'Original Array:', 
-    nums, 
-    '\n', 
-    'New Array:', 
-    newArr
-  )
-
+  // console.log("Original Array:", nums, "\n", "New Array:", newArr);
 };
 
-logValuesTimes3(nums)
+logValuesTimes3(nums);
 
 const logWordsWithExclamation = (words) => {
-  words.forEach((word) => console.log(word + '!'))
+  words.forEach((word) => console.log(word + "!"));
 };
 
 // Map

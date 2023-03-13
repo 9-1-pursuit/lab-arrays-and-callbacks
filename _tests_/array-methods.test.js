@@ -82,14 +82,14 @@ describe("Array Methods", () => {
     expect(logWordsWithExclamation(words)).toBe(undefined);
   });
 
-  test("A new array of values that are squared and then multiplied by their index number", () => {
+  test.only("A new array of values that are squared and then multiplied by their index number", () => {
     expect(/\.map/.test(arrayValuesSquaredTimesIndex.toString())).toBe(true);
     expect(arrayValuesSquaredTimesIndex(nums)).toStrictEqual([
       0, 4, 18, 48, 100, 180, 294, 448, 648, 900, 0,
     ]);
   });
 
-  test("A new array of words that are all uppercase", () => {
+  test.only("A new array of words that are all uppercase", () => {
     expect(/\.map/.test(arrayWordsUpcased.toString())).toBe(true);
     expect(arrayWordsUpcased(words)).toStrictEqual([
       "THE",
