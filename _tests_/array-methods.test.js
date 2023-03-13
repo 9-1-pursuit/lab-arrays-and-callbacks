@@ -82,14 +82,14 @@ describe("Array Methods", () => {
     expect(logWordsWithExclamation(words)).toBe(undefined);
   });
 
-  test.only("A new array of values that are squared and then multiplied by their index number", () => {
+  test("A new array of values that are squared and then multiplied by their index number", () => {
     expect(/\.map/.test(arrayValuesSquaredTimesIndex.toString())).toBe(true);
     expect(arrayValuesSquaredTimesIndex(nums)).toStrictEqual([
       0, 4, 18, 48, 100, 180, 294, 448, 648, 900, 0,
     ]);
   });
 
-  test.only("A new array of words that are all uppercase", () => {
+  test("A new array of words that are all uppercase", () => {
     expect(/\.map/.test(arrayWordsUpcased.toString())).toBe(true);
     expect(arrayWordsUpcased(words)).toStrictEqual([
       "THE",
@@ -104,11 +104,11 @@ describe("Array Methods", () => {
     ]);
   });
 
-  test("Are some numbers divisible  by 7?", () => {
+  test.only("Are some numbers divisible  by 7?", () => {
     expect(/\.some/.test(areSomeNumsDivisibleBy7.toString())).toBe(true);
     expect(areSomeNumsDivisibleBy7(nums)).toBe(true);
   });
-  test("Do some words have an a?", () => {
+  test.only("Do some words have an a?", () => {
     expect(/\.some/.test(doSomeWordsHaveAnA.toString())).toBe(true);
     expect(doSomeWordsHaveAnA(words)).toBe(true);
   });

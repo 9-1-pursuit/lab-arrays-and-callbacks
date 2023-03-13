@@ -75,12 +75,16 @@ const arrayWordsUpcased = (words) => {
 
 // Some
 
-const areSomeNumsDivisibleBy7 = () => {
-  //
+const areSomeNumsDivisibleBy7 = (nums) => {
+  return nums.some((num) => {
+    return num % 7 === 0;
+  })
 };
 
-const doSomeWordsHaveAnA = () => {
-  //
+const doSomeWordsHaveAnA = (words) => {
+  return words.some((word) => {
+    return word.includes('a')
+  })
 };
 
 module.exports = {
