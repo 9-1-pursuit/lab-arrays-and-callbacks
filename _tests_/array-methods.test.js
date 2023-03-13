@@ -104,11 +104,11 @@ describe("Array Methods", () => {
     ]);
   });
 
-  test.only("Are some numbers divisible  by 7?", () => {
+  test("Are some numbers divisible  by 7?", () => {
     expect(/\.some/.test(areSomeNumsDivisibleBy7.toString())).toBe(true);
     expect(areSomeNumsDivisibleBy7(nums)).toBe(true);
   });
-  test.only("Do some words have an a?", () => {
+  test("Do some words have an a?", () => {
     expect(/\.some/.test(doSomeWordsHaveAnA.toString())).toBe(true);
     expect(doSomeWordsHaveAnA(words)).toBe(true);
   });
