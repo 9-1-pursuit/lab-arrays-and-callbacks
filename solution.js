@@ -21,51 +21,62 @@ const arrayOddLengthWords = (words) => {
 
 // Find
 
-const firstValDivisibleBy4 = () => {
-  //
+const firstValDivisibleBy4 = (nums) => {
+  return nums.find(number => number % 4 == 0)
 };
 
-const firstWordLongerThan4Char = () => {
-  //
+const firstWordLongerThan4Char = (words) => {
+  return words.find(word => word.length > 4)
 };
 
 // Find Index
 
-const firstNumIndexDivisibleBy3 = () => {
-  //
+const firstNumIndexDivisibleBy3 = (nums) => {
+  return nums.findIndex(number => number % 3 == 0)
 };
 
-const firstWordIndexLessThan2Char = () => {
-  //
+const firstWordIndexLessThan2Char = (words) => {
+  return words.findIndex(word => word.length < 2)
 };
 
 // For Each
 
-const logValuesTimes3 = () => {
-  //
+const logValuesTimes3 = (nums) => {
+  nums.forEach(number => {
+    console.log(number * 3)
+  })
 };
 
-const logWordsWithExclamation = () => {
-  //
+const logWordsWithExclamation = (words) => {
+  words.forEach(word => {
+    console.log(`${word}!`)
+  })
 };
 
 // Map
 
-const arrayValuesSquaredTimesIndex = () => {
-  //
+const arrayValuesSquaredTimesIndex = (nums) => {
+  return nums.map((number, index) => {
+    return number ** 2 * index
+  })
 };
 
-const arrayWordsUpcased = () => {
-  //
+
+const arrayWordsUpcased = (words) => {
+  return words.map(word => {
+    return word.toUpperCase()
+  })
 };
 
 // Some
 
-const areSomeNumsDivisibleBy7 = () => {
+const areSomeNumsDivisibleBy7 = (nums) => {
+  return nums.some(number => number % 7 == 0)
   //
 };
 
-const doSomeWordsHaveAnA = () => {
+const doSomeWordsHaveAnA = (words) => {
+  return words.some(word => word.includes('a' || 'A'))
   //
 };
 
