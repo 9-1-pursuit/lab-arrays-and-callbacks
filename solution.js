@@ -80,6 +80,86 @@ const doSomeWordsHaveAnA = (words) => {
   //
 };
 
+// working with data
+const products = [
+  {
+    name: "fairy lights",
+    price: 5.99,
+    description: "festive holiday decoration",
+  },
+  {
+    name: "banana",
+    price: 0.99,
+    description: "full of potassium",
+  },
+  {
+    name: "egg separator",
+    price: 3.99,
+    description: "it separates yolks from whites",
+  },
+  {
+    name: "flag",
+    price: 5.99,
+    description: "catches the breeze",
+  },
+  {
+    name: "quark",
+    price: 0.01,
+    description: "Very small",
+  },
+  {
+    name: "turtleneck",
+    price: 19.99,
+    description: "available in black and slightly-darker black",
+  },
+  {
+    name: "mitt (leather)",
+    price: 15,
+    description: "regulation sized",
+  },
+  {
+    name: "nothing",
+    price: 10,
+    description: "Hey, if you pay us, we won't ask any questions.",
+  },
+  {
+    name: "violin",
+    price: 2000,
+    description: "Talk about a JS fiddle...",
+  },
+  {
+    name: "yoyo",
+    price: 1,
+    description: "We had to pull some strings to get this one in.",
+  },
+];
+
+// filter:
+const productsLessThanTen = (products) => {
+  return products.filter(product => product.price < 10)
+}
+
+// sort
+
+const productsSortedAlphabeticallyByProductName = (products) => {
+  return products.sort((a, b) => {
+  const nameA = a.name.toUpperCase(); 
+  const nameB = b.name.toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  // names must be equal
+  return 0;
+});
+}
+
+// console.log(productsLessThanTen(products))
+console.log(productsSortedAlphabeticallyByProductName(products))
+
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
